@@ -135,6 +135,11 @@ h1 {
   height: 100%;
 }
 
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
 .btn-add {
   background-color: var(--green-moss);
   color: white;
@@ -148,7 +153,7 @@ h1 {
   gap: 0.5rem;
   transition: all 0.1s;
   height: 2.5rem;
-} 
+}
 
 .btn-add:hover {
   background-color: #7f8c4f;
@@ -160,37 +165,115 @@ h1 {
 
 .container-table {
   margin-top: 1.875rem;
-  padding-bottom: 1.9375rem;
+  padding-bottom: 0.625rem;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
   background-color: white;
   border-radius: 0.5rem;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.099);
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.099);
 }
 
 table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 tr {
   text-align: left;
 }
 
+tr + tr {
+  border-top: 1px solid #d1d1d1;
+}
+
+td {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  color: #666666;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 th {
   font-size: 0.875rem;
   font-weight: 700;
   color: #666666;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.container-name {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .avatar-table {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 100%;
   background-color: #666666;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+.container-name-and-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-table {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.email-table {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.status-active {
+  color: #1E4800;
+  padding-left: 0.6875rem;
+  padding-right: 0.6875rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background-color: #e3f6e9;
+  border: 0.125rem solid #C4ECD2;
+  border-radius: 0.25rem;
+}
+
+.status-inactive {
+  color: #A30505;
+  padding-left: 0.6875rem;
+  padding-right: 0.6875rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background-color: #FFE0E0;
+  border: 0.125rem solid #FF8585;
+  border-radius: 0.25rem;
+}
+
+.container-btn-table {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.container-btn-table > button {
+  border-radius: 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.2s;
+}
+
+.container-btn-table > button:hover {
+  background-color: #66666616;
 }
