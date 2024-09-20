@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/clients.css">
+</head>
+<body>
+  <div class="sidebar">
+    <img class="image-logo" src="../images/logo.png" alt="logo">
+
+    <nav class="container-sidebar-nav">
+      <a href="./index.html" class="nav-item select-item">
+        <img src="../images/icons/home-icon.png" alt="home-icon" class="icon">
+        Início
+      </a>
+      
+      <a href="./clients.html" class="nav-item">
+        <img src="../images/icons/client-icon.png" alt="home-icon" class="icon">
+        Clientes
+      </a>
+    </nav>
+  </div>
+
+  <main>
+    <header>
+      <img src="../images/icons/bell-icon.png" alt="bell-icon" class="bell-icon">
+
+      <div class="line"></div>
+
+      <div class="container-profile">
+        <img src="https://github.com/EmanuelBacalhau.png" alt="Avatar" class="avatar">
+        <img src="../images/icons/chevron-down-icon.png" alt="chevron-down-icon" class="chevron-down-icon">
+      </div>
+    </header>
+
+    <section class="container-section">
+      <h1>Clientes</h1>
+
+      <div class="container-form">
+        <form>
+          <div class="container-input-search">
+            <input list="clients-list" id="client-input" placeholder="Procurar" />
+
+            <datalist id="clients-list"></datalist>
+
+            <button type="submit">
+              <img src="../images/icons/search-icon.png" alt="search-icon">
+            </button>
+          </div>
+        </form>
+
+        <button class="btn-add">
+          <span class="plus-icon">+</span>
+          Adicionar cliente
+        </button>
+      </div>
+
+      <div class="container-table">
+        <table>
+          <thead>
+            <tr>
+              <th>NOME COMPLETO</th>
+              <th>TELEFONE</th>
+              <th>PLANO</th>
+              <th>STATUS</th>
+              <th>VENCIMENTO</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="clients-table">
+            <tr>
+              <td>
+                <div class="avatar-table">
+                  <span>AB</span>
+                </div>
+
+                <div>
+                  <span>Emanuel Bacalhau</span>
+                  <span>bacalhau@gmail.com</span>
+                </div>
+              </td>
+              <td>
+                <span>(11) 99999-9999</span>
+              </td>
+              <td>
+                <span>Plano 1</span>
+              </td>
+              <td>
+                <span class="status">Ativo</span>
+              </td>
+              <td>
+                <span>10</span>
+              </td>
+              <td>
+                <button class="btn-edit">
+                  <img src="../images/icons/eye-icon.png" alt="edit-icon">
+                </button>
+                <button class="btn-edit">
+                  <img src="../images/icons/edit-icon.png" alt="edit-icon">
+                </button>
+                <button class="btn-edit">
+                  <img src="../images/icons/trash-icon.png" alt="edit-icon">
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/reset.js"></script>
+  <script src="../scripts/clients.js"></script>
+</body>
+</html>
