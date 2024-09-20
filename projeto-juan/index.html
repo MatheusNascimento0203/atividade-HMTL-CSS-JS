@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/projeto-juan/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/projeto-juan/imgs/logoCheck.svg" alt="" />
+      <nav>
+        <div class="nav">
+          <a href="">Início</a>
+          <a href="">Tarefas</a>
+          <a href="">Relatório</a>
+          <a href="">Configurações </a>
+        </div>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="container-conteudo">
+        <div class="tarefas">
+          <div class="tarefas-info">
+            <p class="title">Tarefas</p>
+            <p>
+              Esta é uma lista de todas as tarefas e suas respectivas
+              informações.
+            </p>
+          </div>
+          <button class="btn-novaTarefa">NOVA TAREFA</button>
+        </div>
+        <div class="container-table">
+          <table>
+            <thead>
+              <tr>
+                <th class="tipo-tarefa">Tarefa</th>
+                <th>Tipo de Tarefa</th>
+                <th class="padrao-th">Prioridade</th>
+                <th class="padrao-th">Destino</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div>
+                    <p class="tarefa-padrao">Preparar apresentação</p>
+                    <p class="descricao-tarefa">Descricao da tarefa</p>
+                  </div>
+                </td>
+                <td class="tarefa-padrao">Trabalho</td>
+                <td class="tarefa-padrao padrao-th">Alta</td>
+                <td class="tarefa-padrao padrao-th">Reunião de equipe</td>
+                <td>
+                  <div class="btn-acoes">
+                    <img
+                      class="edit"
+                      src="/projeto-juan/imgs/Editar.svg"
+                      alt=""
+                    />
+                    <img
+                      class="delete"
+                      src="/projeto-juan/imgs/Lixeira.svg"
+                      alt=""
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Comprar materiais</td>
+                <td>Logística</td>
+                <td>Média</td>
+                <td>Escritório</td>
+              </tr>
+              <tr>
+                <td>Revisar relatório</td>
+                <td>Trabalho</td>
+                <td>Alta</td>
+                <td>Gerente</td>
+              </tr>
+              <tr>
+                <td>Atualizar site</td>
+                <td>Manutenção</td>
+                <td>Baixa</td>
+                <td>Online</td>
+              </tr>
+              <tr>
+                <td>Organizar evento</td>
+                <td>Planejamento</td>
+                <td>Alta</td>
+                <td>Local do evento</td>
+              </tr>
+              <tr>
+                <td>Enviar e-mails</td>
+                <td>Comunicação</td>
+                <td>Média</td>
+                <td>Clientes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL PARA CRIAR TAREFA -->
+    <section class="container-modal">
+      <div class="modal-criar-tarefa">
+        <p class="criar">CRIAR TAREFA</p>
+        <form action="">
+          <div class="padrao-input">
+            <label for="">Tarefa</label>
+            <input class="padrao-tamanho-input" type="text" name="" id="" />
+          </div>
+          <div class="padrao-input">
+            <label for="">Descrição</label>
+            <input
+              class="padrao-tamanho-input-descricao"
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
+          <div class="padrao-input">
+            <label for="">Tipo de Tarefa</label>
+            <input class="padrao-tamanho-input" type="text" name="" id="" />
+          </div>
+          <div class="padrao-input">
+            <label for="">Destino</label>
+            <input class="padrao-tamanho-input" type="text" name="" id="" />
+          </div>
+          <div class="padrao-input">
+            <label for="">Prioridade</label>
+            <input class="padrao-tamanho-input" type="text" name="" id="" />
+          </div>
+          <div class="btns">
+            <button class="btn-cancelar">Cancelar</button>
+            <button class="btn-salvar">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- MODAL PARA EDITAR TAREFA -->
+    <section class="container-modal-editar">
+      <div class="modal-criar-tarefa-editar">
+        <p class="editar">EDITAR TAREFA</p>
+        <form action="">
+          <div class="padrao-input-editar">
+            <label for="">Tarefa</label>
+            <input
+              class="padrao-tamanho-input-editar"
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
+          <div class="padrao-input-editar">
+            <label for="">Descrição</label>
+            <input
+              class="padrao-tamanho-input-descricao-editar"
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
+          <div class="padrao-input-editar">
+            <label for="">Tipo de Tarefa</label>
+            <input
+              class="padrao-tamanho-input-editar"
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
+          <div class="padrao-input-editar">
+            <label for="">Destino</label>
+            <input
+              class="padrao-tamanho-input-editar"
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
+          <div class="padrao-input-editar">
+            <label for="">Prioridade</label>
+            <input
+              class="padrao-tamanho-input-editar"
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
+          <div class="btns-editar">
+            <button class="btn-cancelar-editar">Cancelar</button>
+            <button class="btn-salvar-editar">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

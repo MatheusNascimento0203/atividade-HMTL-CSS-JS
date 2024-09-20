@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  width: 115px;
+  height: 29px;
+  margin-left: 56px;
+}
+
+header {
+  background-color: #001b4a;
+  height: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav {
+  display: flex;
+  gap: 50px;
+}
+
+.container {
+  background-color: #eaeaea;
+  height: calc(100vh - 89px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-conteudo {
+  width: 1328px;
+  height: 717px;
+  background-color: #ffff;
+  border: 1px solid #d9d9d9;
+}
+
+.tarefas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 52px;
+}
+
+.tarefas-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 36px;
+}
+
+.title {
+  font-size: 20px;
+  color: #001b4a;
+  font-weight: 600;
+}
+
+.btn-novaTarefa {
+  margin-right: 58px;
+  color: white;
+  background-color: #001b4a;
+  border: 0;
+  width: 106px;
+  height: 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.btn-novaTarefa:hover {
+  background-color: #053383;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: 36px;
+  margin-top: 48px;
+  width: 1255px;
+}
+
+th {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+th,
+td {
+  height: 84px;
+}
+
+tr:has(td) {
+  border-top: 1px solid #d9d9d9;
+}
+
+.tarefa-padrao {
+  color: #3d3c3c;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn-acoes {
+  display: flex;
+  gap: 25px;
+}
+
+.edit {
+  cursor: pointer;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.descricao-tarefa {
+  color: #3d3c3c;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.padrao-th {
+  text-align: center;
+}
+
+/* MODAL PARA CRIAR TAREFA - INÍCIO */
+
+.container-modal {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  background-color: #66666670;
+}
+
+.modal-criar-tarefa {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30px;
+  padding-left: 84px;
+  padding-bottom: 30px;
+  padding-right: 84px;
+}
+
+.criar {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+  color: #001b4a;
+}
+
+.padrao-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.padrao-tamanho-input {
+  width: 391px;
+  height: 36px;
+  background-color: #eeeeee;
+  border-radius: 3px;
+  border: 0;
+}
+
+.padrao-tamanho-input-descricao {
+  width: 391px;
+  height: 60px;
+  background-color: #eeeeee;
+  border-radius: 3px;
+  border: 0;
+}
+
+label {
+  margin-top: 15px;
+  color: #272829;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.btns {
+  display: flex;
+  justify-content: end;
+  gap: 19px;
+  margin-top: 31px;
+}
+
+.btn-cancelar {
+  background-color: #ffffff;
+  width: 99px;
+  height: 24px;
+  border: 2px solid #001b4a;
+  border-radius: 4px;
+  color: #001b4a;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-salvar {
+  background-color: #001b4a;
+  width: 77px;
+  height: 24px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* MODAL PARA CRIAR TAREFA - FIM */
+
+/* MODAL PARA EDITAR TAREFA - INÍCIO */
+.container-modal-editar {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  background-color: #66666670;
+}
+
+.modal-criar-tarefa-editar {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30px;
+  padding-left: 84px;
+  padding-bottom: 30px;
+  padding-right: 84px;
+}
+
+.editar {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+  color: #001b4a;
+}
+
+.padrao-input-editar {
+  display: flex;
+  flex-direction: column;
+}
+
+.padrao-tamanho-input-editar {
+  width: 391px;
+  height: 36px;
+  background-color: #eeeeee;
+  border-radius: 3px;
+  border: 0;
+}
+
+.padrao-tamanho-input-descricao-editar {
+  width: 391px;
+  height: 60px;
+  background-color: #eeeeee;
+  border-radius: 3px;
+  border: 0;
+}
+
+label {
+  margin-top: 15px;
+  color: #272829;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.btns-editar {
+  display: flex;
+  justify-content: end;
+  gap: 19px;
+  margin-top: 31px;
+}
+
+.btn-cancelar-editar {
+  background-color: #ffffff;
+  width: 99px;
+  height: 24px;
+  border: 2px solid #001b4a;
+  border-radius: 4px;
+  color: #001b4a;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-salvar-editar {
+  background-color: #001b4a;
+  width: 77px;
+  height: 24px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* MODAL PARA EDITAR TAREFA - FIM */
