@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/clientes.css" />
+    <title>Clientes</title>
+  </head>
+  <body>
+    <aside>
+      <img class="imagem" src="img/Logo.svg" alt="Logo" />
+      <nav>
+        <a href="index.html" class="link-inicio">
+          <div class="inicio">
+            <img src="img/Vector-home.png" alt="Home" />
+            <p>Inicio</p>
+          </div>
+        </a>
+        <div class="clientes">
+          <img src="img/Vector-clientes.png" alt="Home" />
+          <p>Clientes</p>
+        </div>
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <img src="img/Vector-sino.png" alt="Sino" />
+        <img src="img/Line 397-barra.png" alt="Barra" />
+        <div class="circulo"></div>
+        <img src="img/keyboard_arrow_left_24px-seta-baixo.png" alt="" />
+      </header>
+
+      <section class="container">
+        <p class="p-container">Clientes</p>
+        <div class="espacamento-input-btn">
+          <div>
+            <input
+              list="browsers"
+              name="browser"
+              id="pessoa"
+              placeholder="Procurar"
+            />
+            <img src="img/Vector-lupa.png" alt="Pesquisa" class="pesquisa" />
+          </div>
+
+          <datalist id="browsers">
+            <option value="Edge"></option>
+            <option value="Firefox"></option>
+            <option value="Chrome"></option>
+            <option value="Opera"></option>
+            <option value="Safari"></option>
+          </datalist>
+
+          <div class="adicionar open">
+            <img src="img/Vector-adicionar.svg" alt="Adicionar" />
+            <p>Adicionar</p>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <th>NOME COMPLETO</th>
+            <th>TELEFONE</th>
+            <th>PLANO</th>
+            <th class="padrao-th-td">STATUS</th>
+            <th class="padrao-th-td">VENCIMENTO</th>
+            <th></th>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <div class="nome-completo">
+                  <div class="circulo-border"></div>
+                  <div class="nome-email">
+                    <p class="texto-bold">Alex da Silva Sobrinho</p>
+                    <p>alex.silva@smn.com.br</p>
+                  </div>
+                </div>
+              </td>
+              <td class="tam-texto-bold texto-bold">(83) 99156-5684</td>
+              <td class="tam-texto-bold texto-bold">Prata</td>
+              <td
+                class="padrao-th-td status-centralizar tam-texto-bold texto-bold"
+              >
+                <p class="status">Ativo</p>
+              </td>
+              <td class="padrao-th-td tam-texto-bold texto-bold">10</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="nome-completo">
+                  <div class="circulo-border"></div>
+                  <div class="nome-email">
+                    <p class="texto-bold">Alex da Silva Sobrinho</p>
+                    <p>alex.silva@smn.com.br</p>
+                  </div>
+                </div>
+              </td>
+              <td class="tam-texto-bold texto-bold">(83) 99156-5684</td>
+              <td class="tam-texto-bold texto-bold">Prata</td>
+              <td
+                class="padrao-th-td status-centralizar tam-texto-bold texto-bold"
+              >
+                <p class="status">Ativo</p>
+              </td>
+              <td class="padrao-th-td tam-texto-bold texto-bold">10</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <dialog class="modal">
+      <p>Cadastro</p>
+      <div class="circulo-border"></div>
+      <form method="dialog" id="form1">
+        <div>
+          <div>
+            <label>Nome Completo</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Nome Completo</label>
+            <input type="text" />
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label>Nome Completo</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Nome Completo</label>
+            <input type="text" />
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label>Nome Completo</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Nome Completo</label>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="fechar-modal">
+            <button type="button" class="close">X</button>
+        </div>
+      </form>
+    </dialog>
+    <script src="index.js"></script>
+  </body>
+</html>
