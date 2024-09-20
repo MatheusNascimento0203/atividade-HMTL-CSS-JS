@@ -1,3 +1,4 @@
+/* Layout */
 body {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -103,6 +104,7 @@ header {
   padding: 1rem;
 }
 
+/* Section */
 h1 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -173,6 +175,7 @@ h1 {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.099);
 }
 
+/* Table Clients */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -240,24 +243,24 @@ th {
 }
 
 .status-active {
-  color: #1E4800;
+  color: #1e4800;
   padding-left: 0.6875rem;
   padding-right: 0.6875rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   background-color: #e3f6e9;
-  border: 0.125rem solid #C4ECD2;
+  border: 0.125rem solid #c4ecd2;
   border-radius: 0.25rem;
 }
 
 .status-inactive {
-  color: #A30505;
+  color: #a30505;
   padding-left: 0.6875rem;
   padding-right: 0.6875rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  background-color: #FFE0E0;
-  border: 0.125rem solid #FF8585;
+  background-color: #ffe0e0;
+  border: 0.125rem solid #ff8585;
   border-radius: 0.25rem;
 }
 
@@ -276,4 +279,118 @@ th {
 
 .container-btn-table > button:hover {
   background-color: #66666616;
+}
+
+/* Modal */
+.container-modal-details {
+  position: absolute;
+  inset: 0;
+  background-color: #f1f5f970;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-container {
+  position: absolute;
+  inset: 0;
+}
+
+.container-modal {
+  background-color: white;
+  border-radius: 0.375rem;
+  z-index: 1;
+}
+
+.container-data {
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+  padding-bottom: 4.25rem;
+}
+
+.container-avatar {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.avatar-client-modal {
+  width: 8.25rem;
+  height: 8.25rem;
+  border-radius: 100%;
+  margin-top: -70px;
+}
+
+.container-client-modal-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 16.25rem;
+}
+
+.container-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.0625rem;
+}
+
+.client-name {
+  color: #666666;
+  font-weight: 600;
+}
+
+.client-email {
+  font-size: 0.75rem;
+}
+
+.edit-icon-modal {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.container-cards {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-client {
+  background-color: #968F46;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-radius: 0.5rem;
+  width: 11.25rem;
+  text-align: center;
+}
+
+.card-client p {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: white;
+}
+
+.container-details {
+  margin-top: 2.75rem;
+  display: flex;
+  gap: 80px;
+}
+
+.card-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label-detail {
+  font-weight: 700;
+}
+
+.value-detail {
+  font-size: 0.875rem;
 }
