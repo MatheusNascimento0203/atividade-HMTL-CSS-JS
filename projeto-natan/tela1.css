@@ -1,0 +1,91 @@
+
+#corpo-inteiro {
+    width: 100%;
+    height: 100%;
+}
+/* ------------------- CONFIGURAÇÕES DO HEARD SITE -------------------  */
+
+#cabeca-azul {
+  display: flex;
+  justify-content: space-between;
+  background-color: #001b4a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#letreiros {
+  width: 100%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 56px;
+  padding-right: 56px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-cabeca-azul {
+  display: flex;
+  align-items: baseline;
+  color: #ffffff;
+  gap: 50px;
+}
+
+.formatacao-menu-cabeca {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+/* ------------------- CONFIGURAÇÕES DO CORPO DO SITE -------------------  */
+
+#corpo {
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+/* ------------------- CONFIGURAÇÕES DA TABELA -------------------  */
+
+#div-tabela {
+  width: 1328px;
+  height: 717px;
+  background-color: #ffffff;
+}
+
+#div-corpo-tabela {
+  padding: 52px;
+}
+
+#letreiro-cabeca-tabela {
+    height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3px;
+}
+
+.formatacao-texto-tarefas {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20;
+  color: #001b4a;
+  font-weight: bold;
+}
+
+#botao-nova-tarefa {
+  width: 106px;
+  height: 22px;
+  background-color: #001b4a;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
