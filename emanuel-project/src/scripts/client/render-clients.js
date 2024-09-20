@@ -1,24 +1,3 @@
-const renderDataListInput = () => {
-  const input = document.querySelector('#client-input')
-  const datalist = document.querySelector('#clients-list')
-
-  if (input.value !== '') {
-    users.filter(user => user.name.includes(input.value)).forEach(user => {
-      const option = document.createElement('option')
-      option.value = user.name
-      datalist.appendChild(option)
-    })
-  } else {
-    users.sort().forEach(user => {
-      const option = document.createElement('option')
-      option.value = user.name
-      datalist.appendChild(option)
-    })
-  }
-}
-
-renderDataListInput()
-
 const renderClients = () => {
   const clientsTable = document.querySelector('#clients-table')
 
@@ -67,36 +46,6 @@ const renderClients = () => {
     activateClickForEye(user.id)
     activateClickForEdit(user.id)
     activateClickForTrash(user.id)
-  })
-}
-
-function activateClickForEye(id) {
-  const eyeButton = document.querySelector(`#eye-${id}`)
-
-  eyeButton.addEventListener('click', () => {
-    const user = users.find(user => user.id === id)
-    console.log('eye', user);
-    renderClients()
-  })
-}
-
-function activateClickForEdit(id) {
-  const eyeButton = document.querySelector(`#edit-${id}`)
-
-  eyeButton.addEventListener('click', () => {
-    const user = users.find(user => user.id === id)
-    console.log('edit', user);
-    renderClients()
-  })
-}
-
-function activateClickForTrash(id) {
-  const eyeButton = document.querySelector(`#trash-${id}`)
-
-  eyeButton.addEventListener('click', () => {
-    const user = users.findIndex(user => user.id === id)
-    users.splice(user, 1)
-    renderClients()
   })
 }
 
