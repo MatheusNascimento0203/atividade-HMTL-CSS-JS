@@ -28,7 +28,9 @@
               informações.
             </p>
           </div>
-          <button class="btn-novaTarefa">NOVA TAREFA</button>
+          <button class="btn-novaTarefa" id="btn-abrirModal">
+            NOVA TAREFA
+          </button>
         </div>
         <div class="container-table">
           <table>
@@ -103,13 +105,18 @@
     </section>
 
     <!-- MODAL PARA CRIAR TAREFA -->
-    <section class="container-modal">
+    <section class="container-modal" id="Abrirmodal-criar-tarefa">
       <div class="modal-criar-tarefa">
         <p class="criar">CRIAR TAREFA</p>
-        <form action="">
+        <form action="" id="eventform">
           <div class="padrao-input">
             <label for="">Tarefa</label>
-            <input class="padrao-tamanho-input" type="text" name="" id="" />
+            <input
+              class="padrao-tamanho-input"
+              type="text"
+              name=""
+              id="tarefa"
+            />
           </div>
           <div class="padrao-input">
             <label for="">Descrição</label>
@@ -117,23 +124,40 @@
               class="padrao-tamanho-input-descricao"
               type="text"
               name=""
-              id=""
+              id="descricao"
             />
           </div>
           <div class="padrao-input">
             <label for="">Tipo de Tarefa</label>
-            <input class="padrao-tamanho-input" type="text" name="" id="" />
-          </div>
-          <div class="padrao-input">
-            <label for="">Destino</label>
-            <input class="padrao-tamanho-input" type="text" name="" id="" />
+            <input
+              class="padrao-tamanho-input"
+              type="text"
+              name=""
+              id="tipoTarefa"
+            />
           </div>
           <div class="padrao-input">
             <label for="">Prioridade</label>
-            <input class="padrao-tamanho-input" type="text" name="" id="" />
+            <input
+              class="padrao-tamanho-input"
+              type="text"
+              name=""
+              id="prioridade"
+            />
+          </div>
+          <div class="padrao-input">
+            <label for="">Destino</label>
+            <input
+              class="padrao-tamanho-input"
+              type="text"
+              name=""
+              id="destino"
+            />
           </div>
           <div class="btns">
-            <button class="btn-cancelar">Cancelar</button>
+            <button class="btn-cancelar" id="btn-fecharModal" type="button">
+              Cancelar
+            </button>
             <button class="btn-salvar">Salvar</button>
           </div>
         </form>
@@ -196,5 +220,6 @@
         </form>
       </div>
     </section>
+    <script src="/projeto-juan/index.js"></script>
   </body>
 </html>
