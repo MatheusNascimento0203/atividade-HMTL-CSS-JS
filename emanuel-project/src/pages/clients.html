@@ -185,6 +185,111 @@
     </div>
   </div>
 
+  <div id="edit-client-modal" class="container-modal-edit">
+    <div id="empty-container-edit"></div>
+    <div class="container-edit-modal">
+      <form id="form-edit">
+        <div class="thumbnail-container">
+          <label for="input-thumbnail-edit" class="thumbnail-file">
+            <img src="" alt="client-icon-modal" class="client-thumbnail-modal-edit">
+            <img src="../images/icons/camera-icon.png" alt="client-icon-modal" class="camera-icon">
+          </label>
+          <input type="file" id="input-thumbnail-edit" name="thumbnail" >
+        </div>
+      
+        <div class="container-form-data">
+          <div class="container-input container-set-avatar">
+            <label for="input-avatar" class="icon-file">
+              <img src="../images/icons/upload-icon.png" alt="client-icon-modal" class="client-icon-modal-edit">
+            </label>
+            <input type="file" id="input-avatar-edit" name="avatar" >
+          </div>
+      
+          <div class="container-inputs">
+            <div class="container-input">
+              <label for="input-name-edit" class="pattern-label">
+                Nome completo
+              </label>
+              <input type="text" id="input-name-edit" name="name" class="pattern-input" required>
+            </div>
+      
+            <div class="container-input">
+              <label for="input-email-edit" class="pattern-label">
+                E-mail
+              </label>
+              <input type="email" id="input-email-edit" name="email" class="pattern-input" required>
+            </div>
+          </div>
+      
+          <div class="container-inputs">
+            <div class="container-input">
+              <label for="select-plan-edit" class="pattern-label">
+                Plano
+              </label>
+              <select id="select-plan-edit" name="plan" class="pattern-select" required>
+                <option value="Bronze">Bronze</option>
+                <option value="Prata">Prata</option>
+                <option value="Gold">Gold</option>
+              </select>
+            </div>
+      
+            <div class="container-input">
+              <label for="select-maturity-edit" class="pattern-label">
+                Vencimento
+              </label>
+              <select id="select-maturity-edit" name="maturity" class="pattern-select" required>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+              </select>
+            </div>
+      
+            <div class="container-input">
+              <label for="select-status-edit" class="pattern-label">
+                Status
+              </label>
+              <select id="select-status-edit" name="status" class="pattern-select" required>
+                <option value="true">Ativo</option>
+                <option value="false">Inativo</option>
+              </select>
+            </div>
+          </div>
+      
+          <div class="container-inputs">
+            <div class="container-input">
+              <label for="input-phone-edit" class="pattern-label">
+                Telefone
+              </label>
+              <input type="text" id="input-phone-edit" name="phone" class="pattern-input" required>
+            </div>
+      
+            <div class="container-input">
+              <label for="input-discord-edit" class="pattern-label">
+                Discord
+              </label>
+              <input type="text" id="input-discord-edit" name="discord" class="pattern-input" required>
+            </div>
+      
+            <div class="container-input">
+              <label for="input-skype-edit" class="pattern-label">
+                Skype
+              </label>
+              <input type="text" id="input-skype-edit" name="skype" class="pattern-input" required>
+            </div>
+          </div>
+        </div>
+      
+        <div class="container-btns">
+          <button type="button" class="btn cancel-btn" id="cancel-btn-edit">Cancelar</button>
+          <button type="submit" class="btn register-btn">Atualizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <div id="show-details-modal" class="container-modal-details">
   </div>
 

@@ -433,10 +433,6 @@ th {
   width: 80%;
 }
 
-.title-page {
-  color: #959c55;
-}
-
 .container-input {
   display: flex;
   flex-direction: column;
@@ -588,4 +584,40 @@ th {
 .cancel-btn:hover {
   background-color: #d40606;
   color: white;
+}
+
+/* Edit modal */
+.container-modal-edit {
+  position: absolute;
+  inset: 0;
+  background-color: #f1f5f970;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-edit-modal {
+  background-color: white;
+  border-radius: 0.375rem;
+  z-index: 1;
+  padding-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow: hidden;
+  width: 80%;
+}
+
+#empty-container-edit {
+  position: absolute;
+  inset: 0;
+}
+
+#input-avatar-edit {
+  display: none;
+}
+
+#input-thumbnail-edit {
+  display: none;
 }

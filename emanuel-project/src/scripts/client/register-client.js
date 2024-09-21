@@ -31,6 +31,8 @@ form.addEventListener('submit', (event) => {
   const plan = document.querySelector('#select-plan').value
   const status = document.querySelector('#select-status').value
   const maturity = document.querySelector('#select-maturity').value
+  const discord = document.querySelector('#input-discord').value
+  const skype = document.querySelector('#input-skype').value
   const createdAt = new Date().toLocaleDateString()
 
   const user = {
@@ -44,7 +46,9 @@ form.addEventListener('submit', (event) => {
     plan,
     status,
     maturity,
-    createdAt
+    createdAt,
+    discord,
+    skype
   }
 
   users.push(user)

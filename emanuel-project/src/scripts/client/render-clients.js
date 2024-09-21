@@ -4,8 +4,6 @@ const renderClients = () => {
   clientsTable.innerHTML = ''
 
   users.forEach(user => {
-    console.log(user);
-
     const tr = document.createElement('tr')
     tr.innerHTML = `
       <td class="container-name">
