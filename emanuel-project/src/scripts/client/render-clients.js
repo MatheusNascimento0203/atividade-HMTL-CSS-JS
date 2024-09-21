@@ -4,11 +4,13 @@ const renderClients = () => {
   clientsTable.innerHTML = ''
 
   users.forEach(user => {
+    console.log(user);
+
     const tr = document.createElement('tr')
     tr.innerHTML = `
       <td class="container-name">
         <div class="avatar-table">
-          <span>${user.initials}</span>
+          <img src=${URL.createObjectURL(user.avatar)} alt="client-icon-modal" class="client-thumbnail-modal-details">
         </div>
 
         <div class="container-name-and-email">
@@ -23,7 +25,7 @@ const renderClients = () => {
         <span>${user.plan}</span>
       </td>
       <td>
-        <span class=${user.status === true ? 'status-active' : 'status-inactive'}>${user.status === true ? 'Ativo' : 'Inativo'}</span>
+        <span class=${user.status === 'true' ? 'status-active' : 'status-inactive'}>${user.status === 'true' ? 'Ativo' : 'Inativo'}</span>
       </td>
       <td>
         <span>10</span>

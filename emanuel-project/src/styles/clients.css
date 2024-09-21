@@ -225,6 +225,7 @@ th {
   align-items: center;
   justify-content: center;
   color: white;
+  overflow: hidden;
 }
 
 .container-name-and-email {

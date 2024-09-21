@@ -29,11 +29,12 @@ form.addEventListener('submit', (event) => {
   const email = document.querySelector('#input-email').value
   const phone = document.querySelector('#input-phone').value
   const plan = document.querySelector('#select-plan').value
-  const status = document.querySelector('#select-status').checked
+  const status = document.querySelector('#select-status').value
   const maturity = document.querySelector('#select-maturity').value
   const createdAt = new Date().toLocaleDateString()
 
   const user = {
+    id: users.length + 1,
     avatar: avatarFile,
     thumbnail: thumbnailFile,
     initials: name.slice(0, 2).toUpperCase(),
@@ -48,9 +49,12 @@ form.addEventListener('submit', (event) => {
 
   users.push(user)
   form.reset()
-  document.querySelector('.client-icon-modal').src = ""
+  document.querySelector('.client-icon-modal').src = "../images/icons/upload-icon.png"
+  document.querySelector('.client-thumbnail-modal').src = ""
   document.querySelector('.client-icon-modal').classList.remove("img-client")
-  document.querySelector('.client-thumbnail-modal').classList.remove("img-client")
+  const img = document.querySelector('.client-thumbnail-modal')
+  img.style.display = "none"
+  img.classList.remove("img-client")
 
   const modal = document.querySelector('#register-client-modal')
   modal.style.display = "none"
