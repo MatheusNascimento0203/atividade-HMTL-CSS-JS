@@ -117,40 +117,64 @@
       <p>Cadastro</p>
       <div class="circulo-border"></div>
       <form method="dialog" id="form1">
-        <div>
-          <div>
-            <label>Nome Completo</label>
-            <input type="text" />
+        <div class="modal-flex">
+          <div class="flex-columns-modal">
+            <label>Nome Completo *</label>
+            <input type="text" class="input-modal" />
           </div>
-          <div>
-            <label>Nome Completo</label>
-            <input type="text" />
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <label>Nome Completo</label>
-            <input type="text" />
-          </div>
-          <div>
-            <label>Nome Completo</label>
-            <input type="text" />
+          <div class="flex-columns-modal">
+            <label>E-mail *</label>
+            <input type="email" class="input-modal"/>
           </div>
         </div>
 
-        <div>
-          <div>
-            <label>Nome Completo</label>
-            <input type="text" />
+        <div class="modal-flex">
+          <div class="flex-columns-modal">
+            <label>Plano *</label>
+            <select class="input-modal tam-select-plano" ><option selected disabled>Selecionar</option></select>
           </div>
-          <div>
-            <label>Nome Completo</label>
-            <input type="text" />
+          <div class="flex-columns-modal">
+            <label>Vencimento *</label>
+            <select class="input-modal tam-select-vencimento"><option selected disabled>Selecionar</option></select>
+          </div>
+          <div class="flex-columns-modal">
+            <label>Status *</label>
+            <select class="input-modal tam-select-status"><option selected disabled>Ativo</option></select>
           </div>
         </div>
-        <div class="fechar-modal">
-            <button type="button" class="close">X</button>
+
+        <div class="modal-flex">
+            <div class="flex-columns-modal">
+                <label>Telefone</label>
+                <input type="number" class="input-modal"/>
+              </div>
+            <div class="flex-columns-modal">
+                <label>Discord</label>
+                <input type="text" class="input-modal"/>
+            </div>
+            <div class="flex-columns-modal">
+                <label>Skype</label>
+                <input type="text" class="input-modal"/>
+            </div>
+        </div>
+
+        <div class="modal-flex">
+            <div class="flex-columns-modal">
+                <label>Data de cadastro *</label>
+                <input type="date" class="input-modal"/>
+              </div>
+            <div class="flex-columns-modal">
+                <label>Data de Bloqueio</label>
+                <input type="date" class="input-modal"/>
+            </div>
+        </div>
+        <div class="btns-modal">
+            <div class="fechar-modal">
+                <button type="button" class="close">CANCELAR</button>
+            </div>
+            <div class="cadastrar-modal"></div>
+                <button type="button" class="cadastrar">CADASTRAR</button>
+            </div>
         </div>
       </form>
     </dialog>
