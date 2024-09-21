@@ -10,78 +10,80 @@ function activateClickForEye(id) {
     modal.style.display = 'flex'
 
     modal.innerHTML = `
-      <div id="empty-container" class="empty-container"></div>
-      <div class="container-modal">
-        <img src="../images/image 2.png" alt="thumbnail">
+      <div id="empty-container-details"></div>
+      <div class="container">
+        <div class="thumbnail-container-details">
+          <img src=${URL.createObjectURL(user.thumbnail)} alt="client-icon-modal" class="client-thumbnail-modal-details">
+        </div>
 
         <div class="container-data">
-          <div class="container-avatar">
-            <img src="https://github.com/EmanuelBacalhau.png" alt="Avatar Modal" class="avatar-client-modal">
-    
-            <div class="container-client-modal-texts">
-              <div class="container-titles">
-                <h2 class="client-name">${username[0]} ${username[1]}</h2>
-                <span class="client-email">${user.email}</span>
-              </div>
+          <div class="container-profile-basic">
+            <div class="container-avatar-details">
+              <img src=${URL.createObjectURL(user.avatar)} alt="client-icon-modal" class="client-icon-modal-details">
+            </div>
+
+            <div>
+              <h2 class="client-name-details">${username[0]} ${username[1]}</h2>
+              <p class="client-email-details">${user.email}</p>
             </div>
           </div>
 
           <div class="container-cards">
-            <div class="card-client">
-              <p>12 <img src="../images/icons/rappel-icon.png" alt="Icone Rapel"><br>Rapel</p>
+            <div class="card">
+              <span>12 <img src="../images/icons/rappel-icon.png" alt=""><br>Rapel</span>
             </div>
-            <div class="card-client">
-              <p>10 <img src="../images/icons/fish-icon.png" alt="Icone Rapel"><br>Pesca</p>
+            <div class="card">
+              <span>10 <img src="../images/icons/fish-icon.png" alt=""><br>Pesca</span>
             </div>
-            <div class="card-client">
-              <p>6 <img src="../images/icons/cart-icon.png" alt="Icone Rapel"><br>Raly</p>
+            <div class="card">
+              <span>6 <img src="../images/icons/cart-icon.png" alt=""><br>Raly</span>
             </div>
-            <div class="card-client">
-              <p>4 <img src="../images/icons/trail-icon.png" alt="Icone Rapel"><br>Trilhas</p>
+            <div class="card">
+              <span>4 <img src="../images/icons/trail-icon.png" alt=""><br>Trilha</span>
             </div>
           </div>
 
-          <div class="container-details">
-            <div class="card-data">
-              <div class="card-detail">
-                <span class="label-detail">Nome Completo</span>
-                <span class="value-detail">${user.name}</span>
+          <div class="container-full-data">
+            <div class="container-col-data">
+              <div class="col-data">
+                <h4>Nome completo</h4>
+                <p>${user.name}</p>
               </div>
-              <div class="card-detail">
-                <span class="label-detail">Plano</span>
-                <span class="value-detail">${user.plan}</span>
+              <div>
+                <h4>Plano</h4>
+                <p>${user.plan}</p>
               </div>
-              <div class="card-detail">
-                <span class="label-detail">Telefone</span>
-                <span class="value-detail">${user.phone}</span>
+              <div>
+                <h4>Telefone</h4>
+                <p>${user.phone}</p>
               </div>
-              <div class="card-detail">
-                <span class="label-detail">Skype</span>
-                <span class="value-detail">${user.skype}</span>
-              </div>
-            </div>
-            <div class="card-data">
-              <div class="card-detail">
-                <span class="label-detail">E-mail</span>
-                <span class="value-detail">${user.email}</span>
-              </div>
-              <div class="card-detail">
-                <span class="label-detail">Vencimento</span>
-                <span class="value-detail">${user.maturity}</span>
-              </div>
-              <div class="card-detail">
-                <span class="label-detail">Discord</span>
-                <span class="value-detail">${user.discord}</span>
-              </div>
-              <div class="card-detail">
-                <span class="label-detail">Data de cadastro</span>
-                <span class="value-detail">${user.createdAt}</span>
+              <div>
+                <h4>Skype</h4>
+                <p>${user.skype}</p>
               </div>
             </div>
-            <div class="card-data">
-              <div class="card-detail">
-                <span class="label-detail">Status</span>
-                <span class="value-detail">${user.status}</span>
+            <div class="container-col-data">
+              <div class="col-data">
+                <h4>E-mail</h4>
+                <p>${user.email}</p>
+              </div>
+              <div>
+                <h4>Vencimento</h4>
+                <p>${user.maturity}</p>
+              </div>
+              <div>
+                <h4>Discord</h4>
+                <p>${user.discord}</p>
+              </div>
+              <div>
+                <h4>Data de cadastro</h4>
+                <p>${user.createdAt}</p>
+              </div>
+            </div>
+            <div class="container-col-data">
+              <div class="col-data">
+                <h4>Status</h4>
+                <p>${user.status === 'true' ? 'Ativo' : 'Inativo'}</p>
               </div>
             </div>
           </div>
@@ -89,7 +91,7 @@ function activateClickForEye(id) {
       </div>
     `
 
-    handleCloseEditModal()
+    handleCloseEditModal('empty-container-details', 'show-details-modal')
 
     renderClients()
   })

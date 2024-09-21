@@ -49,6 +49,4 @@ const renderClients = () => {
   })
 }
 
-
-
 renderClients()

@@ -52,7 +52,7 @@
           </div>
         </form>
 
-        <button class="btn-add">
+        <button id="btn-register" class="btn-add">
           <span class="plus-icon">+</span>
           Adicionar cliente
         </button>
@@ -79,7 +79,114 @@
     </section>
   </main>
 
-  <div id="show-details-modal" class="container-modal-details"></div>
+  <div id="register-client-modal" class="container-modal-register">
+    <div id="empty-container-register"></div>
+    <div class="container-register-modal">
+      
+      <form id="form-register">
+        <div class="thumbnail-container">
+          <label for="input-thumbnail" class="thumbnail-file">
+            <img src="" alt="client-icon-modal" class="client-thumbnail-modal">
+            <img src="../images/icons/camera-icon.png" alt="client-icon-modal" class="camera-icon">
+          </label>
+          <input type="file" id="input-thumbnail" required>
+        </div>
+
+        <div class="container-form-data">
+          <div class="container-input container-set-avatar">
+            <label for="input-avatar" class="icon-file">
+              <img src="../images/icons/upload-icon.png" alt="client-icon-modal" class="client-icon-modal">
+            </label>
+            <input type="file" id="input-avatar" required>
+          </div>
+
+          <div class="container-inputs">
+            <div class="container-input">
+              <label for="input-name" class="pattern-label">
+                Nome completo
+              </label>
+              <input type="text" id="input-name" class="pattern-input" required>
+            </div>
+
+            <div class="container-input">
+              <label for="input-email" class="pattern-label">
+                E-mail
+              </label>
+              <input type="email" id="input-email" class="pattern-input" required>
+            </div>
+          </div>
+
+          <div class="container-inputs">
+            <div class="container-input">
+              <label for="select-plan" class="pattern-label">
+                Plano
+              </label>
+              <select type="email" id="select-plan" class="pattern-select" required>
+                <option value="Bronze">Bronze</option>
+                <option value="Prata">Prata</option>
+                <option value="Gold">Gold</option>
+              </select>
+            </div>
+
+            <div class="container-input">
+              <label for="select-maturity" class="pattern-label">
+                Vencimento
+              </label>
+              <select type="email" id="select-maturity" class="pattern-select" required>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="10">15</option>
+                <option value="10">20</option>
+                <option value="10">25</option>
+                <option value="10">30</option>
+              </select>
+            </div>
+
+            <div class="container-input">
+              <label for="select-status" class="pattern-label">
+                Status
+              </label>
+              <select type="email" id="select-status" class="pattern-select" required>
+                <option value="true">Ativo</option>
+                <option value="false">Inativo</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="container-inputs">
+            <div class="container-input">
+              <label for="input-phone" class="pattern-label">
+                Telefone
+              </label>
+              <input type="text" id="input-phone" class="pattern-input" required>
+            </div>
+
+            <div class="container-input">
+              <label for="input-discord" class="pattern-label">
+                Discord
+              </label>
+              <input type="tex" id="input-discord" class="pattern-input" required>
+            </div>
+
+            <div class="container-input">
+              <label for="input-skype" class="pattern-label">
+                Skype
+              </label>
+              <input type="text" id="input-skype" class="pattern-input" required>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container-btns">
+          <button type="button" class="btn cancel-btn" id="cancel-btn">Cancelar</button>
+          <button type="submit" class="btn register-btn">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="show-details-modal" class="container-modal-details">
+  </div>
 
   <script src="../scripts/reset.js"></script>
   <script src="../scripts/client/render-datalist-input.js"></script>
@@ -88,5 +195,6 @@
   <script src="../scripts/client/activate-click-for-edit.js"></script>
   <script src="../scripts/client/activate-click-for-trash.js"></script>
   <script src="../scripts/client/render-clients.js"></script>
+  <script src="../scripts/client/register-client.js"></script>
 </body>
 </html>
