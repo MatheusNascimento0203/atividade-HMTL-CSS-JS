@@ -67,7 +67,7 @@
             <th></th>
           </thead>
 
-          <tbody>
+          <tbody class="tbody1">
             <tr>
               <td>
                 <div class="nome-completo">
@@ -86,7 +86,13 @@
                 <p class="status">Ativo</p>
               </td>
               <td class="padrao-th-td tam-texto-bold texto-bold">10</td>
-              <td></td>
+              <td>
+                <div class="espaco-btns">
+                    <img src="img/Group 37168-visualizar.png" alt="">
+                    <img src="img/Vector-editar.png" alt="">
+                    <img src="img/Vector-apagar.png" alt="">
+              </div>
+            </td>
             </tr>
             <tr>
               <td>
@@ -113,6 +119,7 @@
       </section>
     </main>
 
+     <!-- dialog 1 -  -->
     <dialog class="modal">
       <div class="cabecalho-modal">
           <p class="nome-cadastro">Cadastro</p>
@@ -137,7 +144,6 @@
           <div class="flex-columns-modal">
             <label>Plano *</label>
             <select class="input-modal tam-select-plano" id="plano">
-            <option selected disabled>Selecionar</option>
             <option>Gold</option>
             <option>Prata</option>
             <option>Bronze</option>
@@ -145,8 +151,7 @@
         </div>
           <div class="flex-columns-modal">
             <label>Vencimento *</label>
-            <select class="input-modal tam-select-vencimento" id="vencimento">
-                <option selected disabled>Selecionar</option>
+            <select class="input-modal tam-select-vencimento" id="vencimento" required>
                 <option>05</option>
                 <option>10</option>
                 <option>20</option>
@@ -155,8 +160,8 @@
           <div class="flex-columns-modal">
             <label>Status *</label>
             <select class="input-modal tam-select-status" id="status">
-                <option>Ativo</option>
-                <option>Bloqueado</option>
+                <option value="true">Ativo</option>
+                <option value="false">Bloqueado</option>
             </select>
           </div>
         </div>
@@ -196,6 +201,89 @@
         </div>
       </form>
     </dialog>
+
+     <!-- dialog 2 -  -->
+     <dialog class="modal-2">
+        <div class="cabecalho-modal">
+            <p class="nome-cadastro">Cadastro</p>
+            <p>Foto de Perfil</p>
+        </div>
+        <img class="perfil" src="img/image-foto-perfil.svg" alt="Foto de perfil">
+        <img class="editar-foto" src="img/Group 37172-editar.png" alt="Editar">
+        <img class="perfil-fundo" src="img/icons8-camera-96.png" alt="Foto de fundo">
+        <form method="dialog" id="form1">
+          <div class="modal-flex">
+            <div class="flex-columns-modal">
+              <label>Nome Completo *</label>
+              <input type="text" class="input-modal" id="nomeCompleto-2-2" />
+            </div>
+            <div class="flex-columns-modal">
+              <label>E-mail *</label>
+              <input type="email" class="input-modal" id="email-2"/>
+            </div>
+          </div>
+  
+          <div class="modal-flex">
+            <div class="flex-columns-modal">
+              <label>Plano *</label>
+              <select class="input-modal tam-select-plano" id="plano-2">
+              <option>Gold</option>
+              <option>Prata</option>
+              <option>Bronze</option>
+              </select>
+          </div>
+            <div class="flex-columns-modal">
+              <label>Vencimento *</label>
+              <select class="input-modal tam-select-vencimento" id="vencimento-2" required>
+                  <option>05</option>
+                  <option>10</option>
+                  <option>20</option>
+              </select>
+            </div>
+            <div class="flex-columns-modal">
+              <label>Status *</label>
+              <select class="input-modal tam-select-status" id="status-2">
+                  <option value="true">Ativo</option>
+                  <option value="false">Bloqueado</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="modal-flex">
+              <div class="flex-columns-modal">
+                  <label>Telefone</label>
+                  <input type="number" class="input-modal" id="telefone-2"/>
+                </div>
+              <div class="flex-columns-modal">
+                  <label>Discord</label>
+                  <input type="text" class="input-modal" id="discord-2"/>
+              </div>
+              <div class="flex-columns-modal">
+                  <label>Skype</label>
+                  <input type="text" class="input-modal" id="skype-2"/>
+              </div>
+          </div>
+  
+          <div class="modal-flex">
+              <div class="flex-columns-modal">
+                  <label>Data de cadastro *</label>
+                  <input type="date" class="input-modal" id="dataCadastro-2"/>
+                </div>
+              <div class="flex-columns-modal">
+                  <label>Data de Bloqueio</label>
+                  <input type="date" class="input-modal" id="dataBloqueio-2"/>
+              </div>
+          </div>
+          <div class="btns-modal">
+              <div class="fechar-modal">
+                  <button type="button" class="close2 closed-global">CANCELAR</button>
+              </div>
+              <div class="cadastrar-modal"></div>
+                  <button type="submit" class="cadastrar cadastrar-global" id="cadastrar-modal2">CADASTRAR</button>
+              </div>
+          </div>
+        </form>
+      </dialog>
     <script src="index.js"></script>
   </body>
 </html>
