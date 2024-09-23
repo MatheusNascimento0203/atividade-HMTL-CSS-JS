@@ -114,66 +114,84 @@
     </main>
 
     <dialog class="modal">
-      <p>Cadastro</p>
-      <div class="circulo-border"></div>
+      <div class="cabecalho-modal">
+          <p class="nome-cadastro">Cadastro</p>
+          <p>Foto de Perfil</p>
+      </div>
+      <img class="perfil" src="img/image-foto-perfil.svg" alt="Foto de perfil">
+      <img class="editar-foto" src="img/Group 37172-editar.png" alt="Editar">
+      <img class="perfil-fundo" src="img/icons8-camera-96.png" alt="Foto de fundo">
       <form method="dialog" id="form1">
         <div class="modal-flex">
           <div class="flex-columns-modal">
             <label>Nome Completo *</label>
-            <input type="text" class="input-modal" />
+            <input type="text" class="input-modal" id="nomeCompleto" />
           </div>
           <div class="flex-columns-modal">
             <label>E-mail *</label>
-            <input type="email" class="input-modal"/>
+            <input type="email" class="input-modal" id="email"/>
           </div>
         </div>
 
         <div class="modal-flex">
           <div class="flex-columns-modal">
             <label>Plano *</label>
-            <select class="input-modal tam-select-plano" ><option selected disabled>Selecionar</option></select>
-          </div>
+            <select class="input-modal tam-select-plano" id="plano">
+            <option selected disabled>Selecionar</option>
+            <option>Gold</option>
+            <option>Prata</option>
+            <option>Bronze</option>
+            </select>
+        </div>
           <div class="flex-columns-modal">
             <label>Vencimento *</label>
-            <select class="input-modal tam-select-vencimento"><option selected disabled>Selecionar</option></select>
+            <select class="input-modal tam-select-vencimento" id="vencimento">
+                <option selected disabled>Selecionar</option>
+                <option>05</option>
+                <option>10</option>
+                <option>20</option>
+            </select>
           </div>
           <div class="flex-columns-modal">
             <label>Status *</label>
-            <select class="input-modal tam-select-status"><option selected disabled>Ativo</option></select>
+            <select class="input-modal tam-select-status" id="status">
+                <option>Ativo</option>
+                <option>Bloqueado</option>
+            </select>
           </div>
         </div>
 
         <div class="modal-flex">
             <div class="flex-columns-modal">
                 <label>Telefone</label>
-                <input type="number" class="input-modal"/>
+                <input type="number" class="input-modal" id="telefone"/>
               </div>
             <div class="flex-columns-modal">
                 <label>Discord</label>
-                <input type="text" class="input-modal"/>
+                <input type="text" class="input-modal" id="discord"/>
             </div>
             <div class="flex-columns-modal">
                 <label>Skype</label>
-                <input type="text" class="input-modal"/>
+                <input type="text" class="input-modal" id="skype"/>
             </div>
         </div>
 
         <div class="modal-flex">
             <div class="flex-columns-modal">
                 <label>Data de cadastro *</label>
-                <input type="date" class="input-modal"/>
+                <input type="date" class="input-modal" id="dataCadastro"/>
               </div>
             <div class="flex-columns-modal">
                 <label>Data de Bloqueio</label>
-                <input type="date" class="input-modal"/>
+                <input type="date" class="input-modal" id="dataBloqueio"/>
             </div>
         </div>
         <div class="btns-modal">
             <div class="fechar-modal">
-                <button type="button" class="close">CANCELAR</button>
+                <button type="button" class="close closed-global">CANCELAR</button>
             </div>
             <div class="cadastrar-modal"></div>
-                <button type="button" class="cadastrar">CADASTRAR</button>
+                <button type="submit" class="cadastrar cadastrar-global" id="cadastrar-modal1">CADASTRAR</button>
             </div>
         </div>
       </form>
