@@ -201,6 +201,8 @@ th{
 
 .modal{
     margin: auto;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 1) 24%, rgba(255,255,255,1) 0%);
+    padding: 67px 88px 50px 88px;
 }
 
 .modal::backdrop{
@@ -241,7 +243,7 @@ dialog{
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-.close{
+.closed-global{
     background-color: transparent;
     border: 1px solid rgba(212, 6, 6, 1);
     border-radius: 5px;
@@ -249,9 +251,10 @@ dialog{
     font-size: 17px;
     font-weight: 600;
     color: rgba(212, 6, 6, 1);
+    cursor: pointer;
 }
 
-.cadastrar{
+.cadastrar-global{
     background-color: rgba(149, 156, 85, 1);
     border: none;
     border-radius: 5px;
@@ -259,6 +262,7 @@ dialog{
     font-size: 17px;
     font-weight: 600;
     color: white;
+    cursor: pointer;
 }
 
 .btns-modal{
@@ -270,4 +274,40 @@ dialog{
 dialog label{
     font-size: 17px;
     font-weight: 600;
+}
+
+.nome-cadastro{
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(149, 156, 85, 1);
+}
+
+#form1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.perfil{
+    padding: 12px 0px 20px 0px;
+}
+
+.perfil-fundo{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 86rem;
+    top: 6rem;
+}
+
+.cabecalho-modal{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.editar-foto{
+    position: absolute;
+    top: 12rem;
+    left: 9rem;
 }
