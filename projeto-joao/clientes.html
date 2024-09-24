@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/clientes.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Clientes</title>
   </head>
   <body>
@@ -41,15 +42,10 @@
               id="pessoa"
               placeholder="Procurar"
             />
-            <img src="img/Vector-lupa.png" alt="Pesquisa" class="pesquisa" />
+            <img src="img/Vector-lupa.png" alt="Pesquisa" class="pesquisa" id="pesquisarParecidos" />
           </div>
 
           <datalist id="browsers">
-            <option value="Edge"></option>
-            <option value="Firefox"></option>
-            <option value="Chrome"></option>
-            <option value="Opera"></option>
-            <option value="Safari"></option>
           </datalist>
 
           <div class="adicionar open">
@@ -68,52 +64,7 @@
           </thead>
 
           <tbody class="tbody1">
-            <tr>
-              <td>
-                <div class="nome-completo">
-                  <div class="circulo-border"></div>
-                  <div class="nome-email">
-                    <p class="texto-bold">Alex da Silva Sobrinho</p>
-                    <p>alex.silva@smn.com.br</p>
-                  </div>
-                </div>
-              </td>
-              <td class="tam-texto-bold texto-bold">(83) 99156-5684</td>
-              <td class="tam-texto-bold texto-bold">Prata</td>
-              <td
-                class="padrao-th-td status-centralizar tam-texto-bold texto-bold"
-              >
-                <p class="status">Ativo</p>
-              </td>
-              <td class="padrao-th-td tam-texto-bold texto-bold">10</td>
-              <td>
-                <div class="espaco-btns">
-                    <img src="img/Group 37168-visualizar.png" alt="">
-                    <img src="img/Vector-editar.png" alt="">
-                    <img src="img/Vector-apagar.png" alt="">
-              </div>
-            </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="nome-completo">
-                  <div class="circulo-border"></div>
-                  <div class="nome-email">
-                    <p class="texto-bold">Alex da Silva Sobrinho</p>
-                    <p>alex.silva@smn.com.br</p>
-                  </div>
-                </div>
-              </td>
-              <td class="tam-texto-bold texto-bold">(83) 99156-5684</td>
-              <td class="tam-texto-bold texto-bold">Prata</td>
-              <td
-                class="padrao-th-td status-centralizar tam-texto-bold texto-bold"
-              >
-                <p class="status">Ativo</p>
-              </td>
-              <td class="padrao-th-td tam-texto-bold texto-bold">10</td>
-              <td></td>
-            </tr>
+            
           </tbody>
         </table>
       </section>
@@ -202,7 +153,7 @@
       </form>
     </dialog>
 
-     <!-- dialog 2 -  -->
+     <!-- dialog 2 edicao  -->
      <dialog class="modal-2">
         <div class="cabecalho-modal">
             <p class="nome-cadastro">Cadastro</p>
@@ -211,11 +162,11 @@
         <img class="perfil" src="img/image-foto-perfil.svg" alt="Foto de perfil">
         <img class="editar-foto" src="img/Group 37172-editar.png" alt="Editar">
         <img class="perfil-fundo" src="img/icons8-camera-96.png" alt="Foto de fundo">
-        <form method="dialog" id="form1">
+        <form method="dialog" id="form2">
           <div class="modal-flex">
             <div class="flex-columns-modal">
               <label>Nome Completo *</label>
-              <input type="text" class="input-modal" id="nomeCompleto-2-2" />
+              <input type="text" class="input-modal" id="nomeCompleto-2" />
             </div>
             <div class="flex-columns-modal">
               <label>E-mail *</label>
@@ -284,6 +235,27 @@
           </div>
         </form>
       </dialog>
+
+      <!-- dialog 3 remocao -->
+
+      <dialog class="modal-3">
+        <div class="flex-modal3">
+          <div class="cabecalho-modal-3">
+              <p class="nome-associado">Tem certeza que deseja excluir o associado?</p>
+              <p class="nome-desc">Esta ação não pode ser desfeita </p>
+          </div>
+          <img src="img/Icone Alerta.png" alt="Alerta">
+        </div>
+        <div class="btns-modal">
+          <div class="fechar-modal">
+              <button type="button" class="fechar">Cancelar</button>
+          </div>
+          <div class="cadastrar-modal"></div>
+              <button type="button" class="apagar cadastrar-global">Sim, Excluir associado</button>
+          </div>
+      </div>
+      </dialog>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="index.js"></script>
   </body>
 </html>
