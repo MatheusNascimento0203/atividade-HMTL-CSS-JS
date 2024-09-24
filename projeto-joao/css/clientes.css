@@ -207,6 +207,9 @@ th {
     rgba(255, 255, 255, 1) 0%
   );
   padding: 67px 88px 50px 88px;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .modal::backdrop {
@@ -320,28 +323,28 @@ dialog label {
   width: 202px;
 }
 
-#discord{
-    width: 178px;
+#discord {
+  width: 178px;
 }
 
-#skype{
-    width: 286px;
+#skype {
+  width: 286px;
 }
 
-#dataCadastro{
-    width: 190px;
+#dataCadastro {
+  width: 190px;
 }
 
-#dataBloqueio{
-    width: 167px;
+#dataBloqueio {
+  width: 167px;
 }
 
-.espaco-btns{
-    display: flex;
-    gap: 25px;
+.espaco-btns {
+  display: flex;
+  gap: 25px;
 }
 
-.bloqueado{
+.bloqueado {
   background-color: rgba(255, 224, 224, 1);
   border: 1px solid rgba(255, 133, 133, 1);
   padding: 4px 4px;
@@ -350,6 +353,110 @@ dialog label {
   color: rgba(163, 5, 5, 1);
 }
 
-.cursor-btns{
-    cursor: pointer;
+.cursor-btns {
+  cursor: pointer;
+}
+
+/* dialog 2*/
+.modal-2 {
+  margin: auto;
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 1) 24%,
+    rgba(255, 255, 255, 1) 0%
+  );
+  padding: 67px 88px 50px 88px;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-2::backdrop {
+  background-color: rgba(217, 217, 217, 0.7);
+}
+#telefone-2 {
+  width: 202px;
+}
+
+#discord-2 {
+  width: 178px;
+}
+
+#skype-2 {
+  width: 286px;
+}
+
+#dataCadastro-2 {
+  width: 190px;
+}
+
+#dataBloqueio-2 {
+  width: 167px;
+}
+
+#form2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* modal 3 */
+.modal-3 {
+  margin: auto;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.modal-3::backdrop {
+  background-color: rgba(217, 217, 217, 0.7);
+}
+
+.flex-modal3 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 34px;
+}
+
+.nome-associado {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nome-desc {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.cabecalho-modal-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fechar {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: 1px solid rgba(212, 6, 6, 1);
+  border-radius: 5px;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.apagar{
+  background-color: rgba(149, 156, 85, 1);
+  border: none;
+  border-radius: 5px;
+  padding: 9px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
