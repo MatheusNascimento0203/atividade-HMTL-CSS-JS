@@ -42,63 +42,7 @@
                 <th class="padrao-th">Destino</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div>
-                    <p class="tarefa-padrao">Preparar apresentação</p>
-                    <p class="descricao-tarefa">Descricao da tarefa</p>
-                  </div>
-                </td>
-                <td class="tarefa-padrao">Trabalho</td>
-                <td class="tarefa-padrao padrao-th">Alta</td>
-                <td class="tarefa-padrao padrao-th">Reunião de equipe</td>
-                <td>
-                  <div class="btn-acoes">
-                    <img
-                      class="edit"
-                      src="/projeto-juan/imgs/Editar.svg"
-                      alt=""
-                    />
-                    <img
-                      class="delete"
-                      src="/projeto-juan/imgs/Lixeira.svg"
-                      alt=""
-                    />
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Comprar materiais</td>
-                <td>Logística</td>
-                <td>Média</td>
-                <td>Escritório</td>
-              </tr>
-              <tr>
-                <td>Revisar relatório</td>
-                <td>Trabalho</td>
-                <td>Alta</td>
-                <td>Gerente</td>
-              </tr>
-              <tr>
-                <td>Atualizar site</td>
-                <td>Manutenção</td>
-                <td>Baixa</td>
-                <td>Online</td>
-              </tr>
-              <tr>
-                <td>Organizar evento</td>
-                <td>Planejamento</td>
-                <td>Alta</td>
-                <td>Local do evento</td>
-              </tr>
-              <tr>
-                <td>Enviar e-mails</td>
-                <td>Comunicação</td>
-                <td>Média</td>
-                <td>Clientes</td>
-              </tr>
-            </tbody>
+            <tbody id="renderTable"></tbody>
           </table>
         </div>
       </div>
@@ -158,23 +102,25 @@
             <button class="btn-cancelar" id="btn-fecharModal" type="button">
               Cancelar
             </button>
-            <button class="btn-salvar">Salvar</button>
+            <button class="btn-salvar" id="adicionarTarefa" type="submit">
+              Salvar
+            </button>
           </div>
         </form>
       </div>
     </section>
     <!-- MODAL PARA EDITAR TAREFA -->
-    <section class="container-modal-editar">
+    <section class="container-modal-editar" id="Abrirmodal-editar-tarefa">
       <div class="modal-criar-tarefa-editar">
         <p class="editar">EDITAR TAREFA</p>
-        <form action="">
+        <form action="" id="salvarEdit">
           <div class="padrao-input-editar">
             <label for="">Tarefa</label>
             <input
               class="padrao-tamanho-input-editar"
               type="text"
               name=""
-              id=""
+              id="tarefaEditar"
             />
           </div>
           <div class="padrao-input-editar">
@@ -183,7 +129,7 @@
               class="padrao-tamanho-input-descricao-editar"
               type="text"
               name=""
-              id=""
+              id="descricaoEditar"
             />
           </div>
           <div class="padrao-input-editar">
@@ -192,16 +138,7 @@
               class="padrao-tamanho-input-editar"
               type="text"
               name=""
-              id=""
-            />
-          </div>
-          <div class="padrao-input-editar">
-            <label for="">Destino</label>
-            <input
-              class="padrao-tamanho-input-editar"
-              type="text"
-              name=""
-              id=""
+              id="tipoTarefaEditar"
             />
           </div>
           <div class="padrao-input-editar">
@@ -210,14 +147,45 @@
               class="padrao-tamanho-input-editar"
               type="text"
               name=""
-              id=""
+              id="prioridadeEditar"
             />
+            <div class="padrao-input-editar">
+              <label for="">Destino</label>
+              <input
+                class="padrao-tamanho-input-editar"
+                type="text"
+                name=""
+                id="destinoEditar"
+              />
+            </div>
           </div>
           <div class="btns-editar">
-            <button class="btn-cancelar-editar">Cancelar</button>
+            <button class="btn-cancelar-editar" id="btn-fecharModalEditar">
+              Cancelar
+            </button>
             <button class="btn-salvar-editar">Salvar</button>
           </div>
         </form>
+      </div>
+    </section>
+    <!-- MODAL PARA CONFIRMAR A EXCLUSÃO -->
+    <section
+      class="container-modal-confimarExclusao"
+      id="abrirModalConfirmarExclusao"
+    >
+      <div class="modal-confirmarExclusao">
+        <div>
+          <p class="frase1">Tem certeza que deseja apagar essa tarefa?</p>
+          <p class="frase2">Esta ação pode ser desfeita posteriormente</p>
+        </div>
+        <div class="btns">
+          <button class="btn-cancelarExclusao" id="fecharModalExclusao">
+            Cancelar
+          </button>
+          <button class="btn-confirmar" id="confirmarExclusao">
+            Sim, apagar tarefa
+          </button>
+        </div>
       </div>
     </section>
     <script src="/projeto-juan/index.js"></script>
