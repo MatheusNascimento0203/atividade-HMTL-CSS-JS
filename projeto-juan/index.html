@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/projeto-juan/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/projeto-juan/imgs/logoCheck.svg" alt="" />
+      <nav>
+        <div class="nav">
+          <a href="">Início</a>
+          <a href="">Tarefas</a>
+          <a href="">Relatório</a>
+          <a href="">Configurações </a>
+        </div>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="container-conteudo">
+        <div class="tarefas">
+          <div class="tarefas-info">
+            <p class="title">Tarefas</p>
+            <p>
+              Esta é uma lista de todas as tarefas e suas respectivas
+              informações.
+            </p>
+          </div>
+          <button class="btn-novaTarefa" id="btn-abrirModal">
+            NOVA TAREFA
+          </button>
+        </div>
+        <div class="container-table">
+          <table>
+            <thead>
+              <tr>
+                <th class="tipo-tarefa">Tarefa</th>
+                <th>Tipo de Tarefa</th>
+                <th class="padrao-th">Prioridade</th>
+                <th class="padrao-th">Destino</th>
+              </tr>
+            </thead>
+            <tbody id="renderTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL PARA CRIAR TAREFA -->
+    <section class="container-modal" id="Abrirmodal-criar-tarefa">
+      <div class="modal-criar-tarefa">
+        <p class="criar">CRIAR TAREFA</p>
+        <form action="" id="eventform">
+          <div class="padrao-input">
+            <label for="">Tarefa</label>
+            <input
+              class="padrao-tamanho-input"
+              type="text"
+              name=""
+              id="tarefa"
+            />
+          </div>
+          <div class="padrao-input">
+            <label for="">Descrição</label>
+            <input
+              class="padrao-tamanho-input-descricao"
+              type="text"
+              name=""
+              id="descricao"
+            />
+          </div>
+          <div class="padrao-input">
+            <label for="">Tipo de Tarefa</label>
+            <input
+              class="padrao-tamanho-input"
+              type="text"
+              name=""
+              id="tipoTarefa"
+            />
+          </div>
+          <div class="padrao-input">
+            <label for="">Prioridade</label>
+            <input
+              class="padrao-tamanho-input"
+              type="text"
+              name=""
+              id="prioridade"
+            />
+          </div>
+          <div class="padrao-input">
+            <label for="">Destino</label>
+            <input
+              class="padrao-tamanho-input"
+              type="text"
+              name=""
+              id="destino"
+            />
+          </div>
+          <div class="btns">
+            <button class="btn-cancelar" id="btn-fecharModal" type="button">
+              Cancelar
+            </button>
+            <button class="btn-salvar" id="adicionarTarefa" type="submit">
+              Salvar
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- MODAL PARA EDITAR TAREFA -->
+    <section class="container-modal-editar" id="Abrirmodal-editar-tarefa">
+      <div class="modal-criar-tarefa-editar">
+        <p class="editar">EDITAR TAREFA</p>
+        <form action="" id="salvarEdit">
+          <div class="padrao-input-editar">
+            <label for="">Tarefa</label>
+            <input
+              class="padrao-tamanho-input-editar"
+              type="text"
+              name=""
+              id="tarefaEditar"
+            />
+          </div>
+          <div class="padrao-input-editar">
+            <label for="">Descrição</label>
+            <input
+              class="padrao-tamanho-input-descricao-editar"
+              type="text"
+              name=""
+              id="descricaoEditar"
+            />
+          </div>
+          <div class="padrao-input-editar">
+            <label for="">Tipo de Tarefa</label>
+            <input
+              class="padrao-tamanho-input-editar"
+              type="text"
+              name=""
+              id="tipoTarefaEditar"
+            />
+          </div>
+          <div class="padrao-input-editar">
+            <label for="">Prioridade</label>
+            <input
+              class="padrao-tamanho-input-editar"
+              type="text"
+              name=""
+              id="prioridadeEditar"
+            />
+            <div class="padrao-input-editar">
+              <label for="">Destino</label>
+              <input
+                class="padrao-tamanho-input-editar"
+                type="text"
+                name=""
+                id="destinoEditar"
+              />
+            </div>
+          </div>
+          <div class="btns-editar">
+            <button class="btn-cancelar-editar" id="btn-fecharModalEditar">
+              Cancelar
+            </button>
+            <button class="btn-salvar-editar">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- MODAL PARA CONFIRMAR A EXCLUSÃO -->
+    <section
+      class="container-modal-confimarExclusao"
+      id="abrirModalConfirmarExclusao"
+    >
+      <div class="modal-confirmarExclusao">
+        <div>
+          <p class="frase1">Tem certeza que deseja apagar essa tarefa?</p>
+          <p class="frase2">Esta ação pode ser desfeita posteriormente</p>
+        </div>
+        <div class="btns">
+          <button class="btn-cancelarExclusao" id="fecharModalExclusao">
+            Cancelar
+          </button>
+          <button class="btn-confirmar" id="confirmarExclusao">
+            Sim, apagar tarefa
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="/projeto-juan/index.js"></script>
+  </body>
+</html>
