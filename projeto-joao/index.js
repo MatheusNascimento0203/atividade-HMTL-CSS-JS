@@ -139,7 +139,7 @@ function renderList(element) {
   visualizarTd(element, linha);
   removerTd(element, linha);
   editarTd(element);
-  valueVisualizar(element)
+  
 }
 
 // função remover
@@ -300,19 +300,7 @@ function visualizarTd(element, linha) {
     console.log(visualizar);
     modal4.showModal();
 
-    // const numero = element.id;
-    // console.log(numero);
-
-    // const removerIndex = inputs.findIndex((e) => {
-    //   return e.id === Number(numero);
-    // });
-
-    // console.log(removerIndex);
-
-    // if (removerIndex !== -1 || removerIndex !== 0) {
-    //   inputs.splice(removerIndex, 1);
-    //   linha.remove();
-    // }
+    valueVisualizar(element)
     const closeModalBtn4 = document.querySelector(".fecharModal");
     closeModalBtn4.addEventListener("click", () => modal4.close());
   });
@@ -320,6 +308,9 @@ function visualizarTd(element, linha) {
 
 function valueVisualizar(element) {
   let div = document.getElementById("valuePreenchido");
+  let divValue = document.getElementById('valueNames')
+
+  console.log(element)
 
   div.innerHTML = `<!-- column one -->
               <div class="containerColumn">
@@ -364,4 +355,11 @@ function valueVisualizar(element) {
                 <label class="globalLabel">Status</label>
                 <p class="globalUser">${element.status}</p>
               </div>`
+
+    divValue.innerHTML = `<div class="flexNameImage">
+                  <p class="namePerfil">${element.nomeCompleto}</p>
+                  <img src="img/Group 37172-editar.png" alt="">
+                </div>
+                <p class="nameTwoPerfil">${element.email}</p>`
+
 }
