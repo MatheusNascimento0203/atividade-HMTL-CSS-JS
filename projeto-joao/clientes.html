@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/clientes.css" />
+    <title>Clientes</title>
+  </head>
+  <body>
+    <aside>
+      <img class="imagem" src="img/Logo.svg" alt="Logo" />
+      <nav>
+        <a href="index.html" class="link-inicio">
+          <div class="inicio">
+            <img src="img/Vector-home.png" alt="Home" />
+            <p>Inicio</p>
+          </div>
+        </a>
+        <div class="clientes">
+          <img src="img/Vector-clientes.png" alt="Home" />
+          <p>Clientes</p>
+        </div>
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <img src="img/Vector-sino.png" alt="Sino" />
+        <img src="img/Line 397-barra.png" alt="Barra" />
+        <div class="circulo"></div>
+        <img src="img/keyboard_arrow_left_24px-seta-baixo.png" alt="" />
+      </header>
+
+      <section class="container">
+        <p class="p-container">Clientes</p>
+        <div class="espacamento-input-btn">
+          <div>
+            <input
+              list="browsers"
+              name="browser"
+              id="pessoa"
+              placeholder="Procurar"
+            />
+            <img src="img/Vector-lupa.png" alt="Pesquisa" class="pesquisa" id="pesquisarParecidos" />
+          </div>
+
+          <datalist id="browsers">
+          </datalist>
+
+          <div class="adicionar open">
+            <img src="img/Vector-adicionar.svg" alt="Adicionar" />
+            <p>Adicionar</p>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <th>NOME COMPLETO</th>
+            <th>TELEFONE</th>
+            <th>PLANO</th>
+            <th class="padrao-th-td">STATUS</th>
+            <th class="padrao-th-td">VENCIMENTO</th>
+            <th></th>
+          </thead>
+
+          <tbody class="tbody1">
+            
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+     <!-- dialog 1 -  -->
+    <dialog class="modal">
+      <div class="cabecalho-modal">
+          <p class="nome-cadastro">Cadastro</p>
+          <p>Foto de Perfil</p>
+      </div>
+      <img class="perfil" src="img/image-foto-perfil.svg" alt="Foto de perfil">
+      <img class="editar-foto" src="img/Group 37172-editar.png" alt="Editar">
+      <img class="perfil-fundo" src="img/icons8-camera-96.png" alt="Foto de fundo">
+      <form method="dialog" id="form1">
+        <div class="modal-flex">
+          <div class="flex-columns-modal">
+            <label>Nome Completo *</label>
+            <input type="text" class="input-modal" id="nomeCompleto" />
+          </div>
+          <div class="flex-columns-modal">
+            <label>E-mail *</label>
+            <input type="email" class="input-modal" id="email"/>
+          </div>
+        </div>
+
+        <div class="modal-flex">
+          <div class="flex-columns-modal">
+            <label>Plano *</label>
+            <select class="input-modal tam-select-plano" id="plano">
+            <option>Gold</option>
+            <option>Prata</option>
+            <option>Bronze</option>
+            </select>
+        </div>
+          <div class="flex-columns-modal">
+            <label>Vencimento *</label>
+            <select class="input-modal tam-select-vencimento" id="vencimento" required>
+                <option>05</option>
+                <option>10</option>
+                <option>20</option>
+            </select>
+          </div>
+          <div class="flex-columns-modal">
+            <label>Status *</label>
+            <select class="input-modal tam-select-status" id="status">
+                <option value="true">Ativo</option>
+                <option value="false">Bloqueado</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-flex">
+            <div class="flex-columns-modal">
+                <label>Telefone</label>
+                <input type="number" class="input-modal" id="telefone"/>
+              </div>
+            <div class="flex-columns-modal">
+                <label>Discord</label>
+                <input type="text" class="input-modal" id="discord"/>
+            </div>
+            <div class="flex-columns-modal">
+                <label>Skype</label>
+                <input type="text" class="input-modal" id="skype"/>
+            </div>
+        </div>
+
+        <div class="modal-flex">
+            <div class="flex-columns-modal">
+                <label>Data de cadastro *</label>
+                <input type="date" class="input-modal" id="dataCadastro"/>
+              </div>
+            <div class="flex-columns-modal">
+                <label>Data de Bloqueio</label>
+                <input type="date" class="input-modal" id="dataBloqueio"/>
+            </div>
+        </div>
+        <div class="btns-modal">
+            <div class="fechar-modal">
+                <button type="button" class="close closed-global">CANCELAR</button>
+            </div>
+            <div class="cadastrar-modal"></div>
+                <button type="submit" class="cadastrar cadastrar-global" id="cadastrar-modal1">CADASTRAR</button>
+            </div>
+        </div>
+      </form>
+    </dialog>
+
+     <!-- dialog 2 edicao  -->
+     <dialog class="modal-2">
+        <div class="cabecalho-modal">
+            <p class="nome-cadastro">Cadastro</p>
+            <p class="nameTwoCadastro">Foto de Perfil</p>
+        </div>
+        <img class="perfil" src="img/image-foto-perfil.svg" alt="Foto de perfil">
+        <img class="editar-foto" src="img/Group 37172-editar.png" alt="Editar">
+        <form method="dialog" id="form2">
+          <div class="modal-flex">
+            <div class="flex-columns-modal">
+              <label>Nome Completo *</label>
+              <input type="text" class="input-modal" id="nomeCompleto-2" />
+            </div>
+            <div class="flex-columns-modal">
+              <label>E-mail *</label>
+              <input type="email" class="input-modal" id="email-2"/>
+            </div>
+          </div>
+  
+          <div class="modal-flex">
+            <div class="flex-columns-modal">
+              <label>Plano *</label>
+              <select class="input-modal tam-select-plano" id="plano-2">
+              <option>Gold</option>
+              <option>Prata</option>
+              <option>Bronze</option>
+              </select>
+          </div>
+            <div class="flex-columns-modal">
+              <label>Vencimento *</label>
+              <select class="input-modal tam-select-vencimento" id="vencimento-2" required>
+                  <option>05</option>
+                  <option>10</option>
+                  <option>20</option>
+              </select>
+            </div>
+            <div class="flex-columns-modal">
+              <label>Status *</label>
+              <select class="input-modal tam-select-status" id="status-2">
+                  <option value="true">Ativo</option>
+                  <option value="false">Bloqueado</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="modal-flex">
+              <div class="flex-columns-modal">
+                  <label>Telefone</label>
+                  <input type="number" class="input-modal" id="telefone-2"/>
+                </div>
+              <div class="flex-columns-modal">
+                  <label>Discord</label>
+                  <input type="text" class="input-modal" id="discord-2"/>
+              </div>
+              <div class="flex-columns-modal">
+                  <label>Skype</label>
+                  <input type="text" class="input-modal" id="skype-2"/>
+              </div>
+          </div>
+  
+          <div class="modal-flex">
+              <div class="flex-columns-modal">
+                  <label>Data de cadastro *</label>
+                  <input type="date" class="input-modal" id="dataCadastro-2"/>
+                </div>
+              <div class="flex-columns-modal">
+                  <label>Data de Bloqueio</label>
+                  <input type="date" class="input-modal" id="dataBloqueio-2"/>
+              </div>
+          </div>
+          <div class="btns-modal">
+              <div class="fechar-modal">
+                  <button type="button" class="close2 closed-global">CANCELAR</button>
+              </div>
+              <div class="cadastrar-modal"></div>
+                  <button type="submit" class="cadastrar cadastrar-global" id="cadastrar-modal2">ALTERAR</button>
+              </div>
+          </div>
+        </form>
+      </dialog>
+
+      <!-- dialog 3 remocao -->
+
+      <dialog class="modal-3">
+        <div class="flex-modal3">
+          <div class="cabecalho-modal-3">
+              <p class="nome-associado">Tem certeza que deseja excluir o associado?</p>
+              <p class="nome-desc">Esta ação não pode ser desfeita </p>
+          </div>
+          <img src="img/Icone Alerta.png" alt="Alerta">
+        </div>
+        <div class="btns-modal">
+          <div class="fechar-modal">
+              <button type="button" class="fechar">Cancelar</button>
+          </div>
+          <div class="cadastrar-modal"></div>
+              <button type="button" class="apagar cadastrar-global">Sim, Excluir associado</button>
+          </div>
+      </div>
+      </dialog>
+
+      <!-- dialog 4 visualizacao -->
+
+      <dialog class="modal-4">
+        <div>
+          <div class="divFirstModal4">
+              <img src="img/imageFundo.png" alt="">
+          </div>
+          <div>
+            <div class="namePhotoPerfil">
+              <img class="perfilModal4" src="img/image-foto-perfil.svg" alt="Foto de perfil">
+              <div class="namesPerfilModal4" id="valueNames">
+                
+              </div>
+          </div>
+          
+          <!-- div dos retangulos -->
+
+          <div class="containerRetangulos">
+            <div class="retanguloGlobal">
+              <div class="flexGlobal">
+                <p class="numberGlobal">12</p>
+                <img src="img/Vector-rapel.png" alt="Rapel">
+              </div>
+              <p class="globalName">Rapel</p>
+            </div>
+            <div class="retanguloGlobal">
+              <div class="flexGlobal">
+                <p class="numberGlobal">10</p>
+                <img src="img/Group-pesca.png" alt="Pesca">
+              </div>
+              <p class="globalName">Rapel</p>
+            </div>
+            <div class="retanguloGlobal">
+              <div class="flexGlobal">
+                <p class="numberGlobal">6</p>
+                <img src="img/Clip path group-carro.png" alt="Carro">
+              </div>
+              <p class="globalName">Rapel</p>
+            </div>
+            <div class="retanguloGlobal">
+              <div class="flexGlobal">
+                <p class="numberGlobal">4</p>
+                <img src="img/Vector-trilha.png" alt="Trilhas">
+              </div>
+              <p class="globalName">Rapel</p>
+            </div>
+          </div>
+
+          <!-- divs com p preenchidos -->
+          <div class="containerValue" id="valuePreenchido">
+            
+          </div>
+
+          <!-- div botão para fechar -->
+            <div class="moveBtnFechar">
+              <img src="img/Vector-fechar.png" alt="Fechar" class="fecharModal">
+            </div>
+          </div>
+        </div>
+
+
+        
+      </dialog>
+
+      <!-- Toasts -->
+       <div id="toastBox">
+
+       </div>
+    <script src="index.js"></script>
+  </body>
+</html>
