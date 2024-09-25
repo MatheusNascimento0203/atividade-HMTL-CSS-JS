@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/clientes.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Clientes</title>
   </head>
   <body>
@@ -157,11 +156,10 @@
      <dialog class="modal-2">
         <div class="cabecalho-modal">
             <p class="nome-cadastro">Cadastro</p>
-            <p>Foto de Perfil</p>
+            <p class="nameTwoCadastro">Foto de Perfil</p>
         </div>
         <img class="perfil" src="img/image-foto-perfil.svg" alt="Foto de perfil">
         <img class="editar-foto" src="img/Group 37172-editar.png" alt="Editar">
-        <img class="perfil-fundo" src="img/icons8-camera-96.png" alt="Foto de fundo">
         <form method="dialog" id="form2">
           <div class="modal-flex">
             <div class="flex-columns-modal">
@@ -255,7 +253,79 @@
           </div>
       </div>
       </dialog>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+      <!-- dialog 4 visualizacao -->
+
+      <dialog class="modal-4">
+        <div>
+          <div class="divFirstModal4">
+              <img src="img/imageFundo.png" alt="">
+          </div>
+          <div>
+            <div class="namePhotoPerfil">
+              <img class="perfilModal4" src="img/image-foto-perfil.svg" alt="Foto de perfil">
+              <div class="namesPerfilModal4">
+                <div class="flexNameImage">
+                  <p class="namePerfil">Alex Silva</p>
+                  <img src="img/Group 37172-editar.png" alt="">
+                </div>
+                <p class="nameTwoPerfil">alex.silva@gmail.com</p>
+              </div>
+          </div>
+          
+          <!-- div dos retangulos -->
+
+          <div class="containerRetangulos">
+            <div class="retanguloGlobal">
+              <div class="flexGlobal">
+                <p class="numberGlobal">12</p>
+                <img src="img/Vector-rapel.png" alt="Rapel">
+              </div>
+              <p class="globalName">Rapel</p>
+            </div>
+            <div class="retanguloGlobal">
+              <div class="flexGlobal">
+                <p class="numberGlobal">10</p>
+                <img src="img/Group-pesca.png" alt="Pesca">
+              </div>
+              <p class="globalName">Rapel</p>
+            </div>
+            <div class="retanguloGlobal">
+              <div class="flexGlobal">
+                <p class="numberGlobal">6</p>
+                <img src="img/Clip path group-carro.png" alt="Carro">
+              </div>
+              <p class="globalName">Rapel</p>
+            </div>
+            <div class="retanguloGlobal">
+              <div class="flexGlobal">
+                <p class="numberGlobal">4</p>
+                <img src="img/Vector-trilha.png" alt="Trilhas">
+              </div>
+              <p class="globalName">Rapel</p>
+            </div>
+          </div>
+
+          <!-- divs com p preenchidos -->
+          <div class="containerValue" id="valuePreenchido">
+            
+          </div>
+
+          <!-- div botão para fechar -->
+            <div class="moveBtnFechar">
+              <img src="img/Vector-fechar.png" alt="Fechar" class="fecharModal">
+            </div>
+          </div>
+        </div>
+
+
+        
+      </dialog>
+
+      <!-- Toasts -->
+       <div id="toastBox">
+
+       </div>
     <script src="index.js"></script>
   </body>
 </html>
