@@ -85,15 +85,7 @@ form1.addEventListener("submit", function (event) {
   });
   modal.close();
   renderDatalist();
-  Toastify({
-    text: "CRIADO!!!",
-    gravity: "bottom", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    style: {
-      background: "green",
-    },
-  }).showToast();
+  showToast(successMsg);
 });
 
 //funcao para renderizar a lista
@@ -130,7 +122,9 @@ function renderList(element) {
                 element.vencimento
               }</td>
               <td><div class="espaco-btns">
-                    <img src="img/Group 37168-visualizar.png" alt="Visualizar" class="cursor-btns" >
+                    <img src="img/Group 37168-visualizar.png" alt="Visualizar" class="cursor-btns" id=${
+                      "visualizar-" + element.id
+                    }>
                     <img src="img/Vector-editar.png" alt="Editar" class="cursor-btns open2" id=${
                       "edit-" + element.id
                     }>
@@ -142,8 +136,10 @@ function renderList(element) {
 
   tbody.appendChild(linha);
 
+  visualizarTd(element, linha);
   removerTd(element, linha);
   editarTd(element);
+  valueVisualizar(element)
 }
 
 // função remover
@@ -176,6 +172,7 @@ function removerTd(element, linha) {
       }
 
       modal3.close();
+      showToast(errorMsg);
     });
     const closeModalBtn3 = document.querySelector(".fechar");
     closeModalBtn3.addEventListener("click", () => modal3.close());
@@ -255,13 +252,116 @@ function editarTd(element) {
       inputs.forEach((element) => {
         renderList(element);
       });
+
       modal2.close();
+      showToast(editMsg);
     });
   });
   const closeModalBtn2 = document.querySelector(".close2");
   closeModalBtn2.addEventListener("click", () => modal2.close());
 }
 
-// funcao para pesquisar
+// funcao para o toast
 
-function pesquisarLinha(element) {}
+let toastBox = document.getElementById("toastBox");
+let successMsg =
+  '<img src="img/Vector-confirmacao.png" alt="Logo" /> <p>Associado cadastrado com sucesso!</p>';
+let errorMsg =
+  '<img src="img/Vector-exclucao.png" alt="Logo" /> <p>Associado excluído com sucesso</p>';
+let editMsg =
+  '<img src="img/Vector-confirmacao.png" alt="Logo" /> <p>Associado alterado com sucesso!</p>';
+
+function showToast(msg) {
+  let toast = document.createElement("div");
+  toast.classList.add("toast");
+  toast.innerHTML = msg;
+  toastBox.innerHTML = "";
+  toastBox.appendChild(toast);
+
+  if (msg.includes("excluído")) {
+    toast.classList.add("exluido");
+  }
+
+  setTimeout(() => {
+    toast.remove();
+  }, 2000);
+}
+
+// funcao para vizualizar o usuario
+
+function visualizarTd(element, linha) {
+  let visualizar = document.getElementById("visualizar-" + element.id);
+
+  const modal4 = document.querySelector(".modal-4");
+
+  visualizar.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    console.log(visualizar);
+    modal4.showModal();
+
+    // const numero = element.id;
+    // console.log(numero);
+
+    // const removerIndex = inputs.findIndex((e) => {
+    //   return e.id === Number(numero);
+    // });
+
+    // console.log(removerIndex);
+
+    // if (removerIndex !== -1 || removerIndex !== 0) {
+    //   inputs.splice(removerIndex, 1);
+    //   linha.remove();
+    // }
+    const closeModalBtn4 = document.querySelector(".fecharModal");
+    closeModalBtn4.addEventListener("click", () => modal4.close());
+  });
+}
+
+function valueVisualizar(element) {
+  let div = document.getElementById("valuePreenchido");
+
+  div.innerHTML = `<!-- column one -->
+              <div class="containerColumn">
+                <div class="containerFlexValue">
+                  <label class="globalLabel">Nome Completo</label>
+                  <p class="globalUser">${element.nomeCompleto}</p>
+                </div>
+                <div class="containerFlexValue">
+                  <label class="globalLabel">Plano</label>
+                  <p class="globalUser">${element.plano}</p>
+                </div>
+                <div class="containerFlexValue">
+                  <label class="globalLabel">Telefone</label>
+                  <p class="globalUser">${element.telefone}</p>
+                </div>
+                <div class="containerFlexValue">
+                  <label class="globalLabel">Skype</label>
+                  <p class="globalUser">${element.skype}</p>
+                </div>
+              </div>
+              <!-- column two -->
+              <div class="containerColumn">
+                <div class="containerFlexValue">
+                  <label class="globalLabel">E-mail</label>
+                  <p class="globalUser">${element.email}</p>
+                </div>
+                <div class="containerFlexValue">
+                  <label class="globalLabel">Vencimento</label>
+                  <p class="globalUser">${element.vencimento}</p>
+                </div>
+                <div class="containerFlexValue">
+                  <label class="globalLabel">Discord</label>
+                  <p class="globalUser">${element.discord}</p>
+                </div>
+                <div class="containerFlexValue">
+                  <label class="globalLabel">Data de cadastro</label>
+                  <p class="globalUser">${element.dataCadastro}</p>
+                </div>
+              </div>
+              <!-- column three -->
+              <div class="containerFlexValue">
+                <label class="globalLabel">Status</label>
+                <p class="globalUser">${element.status}</p>
+              </div>`
+}
